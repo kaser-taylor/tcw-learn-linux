@@ -1,0 +1,38 @@
+Step 1: download the 64bit arm qemu image from this link https://www.debian.org/distrib/
+
+Step 2: Put it in a folder youll remember
+
+Step 3: Open UTM click Create a New Virtual Machine
+
+Step 4: Click virtualize. remember you have to download the arm debian image cause the modern m series chips are an arm architecture. 
+
+Step 5: Click linux 
+
+Step 6: Click boot from kernal image 
+
+Step 7: browse for linux kernel. remember what folder you put it in
+
+Step 8: remember or look up how Mib works to configure your Machine
+    - 1gb = 1-24Mib
+    - were sending it so 4gb of ram and 2 cores 
+
+Step 9: pick how much drive space
+
+Step 10: I wouldn't pick shared directory personally
+
+Step 11: Doesn't work 
+
+Step 12: downloaded wrong image
+
+Step 13: download this one instead https://cdimage.debian.org/debian-cd/current/arm64/iso-cd/
+
+Step 14: repeat all steps except click boot from iso image on step 6
+
+Step 15: after following the debian installer utm may get stuck in a boot load loop
+
+Step 16: on the boot load installer press c and type in the command halt
+
+step 17: click edit and remove the usb drive
+
+step 18: restart vm
+
