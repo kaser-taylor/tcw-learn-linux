@@ -1,0 +1,22 @@
+Prompt to set up ssh on debian:
+    - how do I set up ssh access on debian?
+
+1. Install the openssh server
+    - so when I tried sudo apt update my user doesn't have sudo power so I need to figure out what to do in that case 
+    - so you switch to the root user using su - and the passwrod 
+    - then run sudo apt update and sudo apt install openssh-server
+
+2. start and enable the ssh service
+    - sudo systemctl start ssh
+    - sudo systemctl enable ssh
+
+    - sudo systemctl status ssh
+
+3. find ip address 
+    - ip a
+    - look for something that says inet under active ntwork interface
+        - so under inet enp0s1 this is the active 
+
+4. on another computer test ssh with ssh debianusername@serverip
+
+5. Success!
