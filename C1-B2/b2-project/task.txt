@@ -1,0 +1,1 @@
+Mini Project: Write a Bash script that monitors disk usage and logs an alert to a file if it exceeds 80%.
