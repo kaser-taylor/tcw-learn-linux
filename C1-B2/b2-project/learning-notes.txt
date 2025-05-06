@@ -1,1 +1,9 @@
+df -h 
+    -df stands for disk filesystem
+    -h gives you human-readable output 
+    - add a / to see whole disk not just files
+
+df -h / | awk 'NR==2 {print $5}'
+    -NR==2 means get the second line
+    -$5 is the fifth column
 
