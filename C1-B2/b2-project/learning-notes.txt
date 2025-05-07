@@ -7,3 +7,35 @@ df -h / | awk 'NR==2 {print $5}'
     -NR==2 means get the second line
     -$5 is the fifth column
 
+if [ "$USAGE" -gt 80 ]; then echo "Disk usage is above threshold!" fi
+    - so $USAGE is the value of the usage variable
+    - -gt is a greater than comparison operator for integers
+    - then executes the rest of the bash script if true
+    - fi ends a if block if spelled backwards lol
+
+echo "Disk usage high on $(date)" >> /filepath
+
+my answer:
+
+    if [df -h / | awk 'NR==2 $5 -gt 80']; then 
+    echo "disk usage is above threshold on $(date)" >> /home/taylor/logfile.log
+
+actual answer:
+    #!/bin/bash
+
+    USAGE=$(df / | awk 'NR==2 {print $5}' | tr -d '%')
+
+    if [ "$USAGE" -gt 80 ]; then
+    echo "disk usage is above threshold on $(date)" >> /home/taylor/logfile.log
+    fi
+
+notes on actual:
+    - USAGE=$ defines a variable
+    - df / shows disk usage for root /
+    - awk 'NR==2 {print $5}' snags the percentage
+    - tr -d '%' removes the % sign
+        - tr stands for translate 
+        - -d deletes characters of a given set 
+
+    
+

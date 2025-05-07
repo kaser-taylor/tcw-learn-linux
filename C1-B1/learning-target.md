@@ -1,0 +1,1 @@
+Understand how virtualization works using QEMU and how to set up a virtual Linux environment.

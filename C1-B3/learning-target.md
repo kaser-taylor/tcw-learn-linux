@@ -1,0 +1,1 @@
+Understand how Linux filesystems work (ext4, etc.), permission bits, and ownership.
